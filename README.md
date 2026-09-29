@@ -1,4 +1,83 @@
-# Hyprland Config
+# DOTFILES
+Setup pessoal
+
+
+
+<table>
+  <tr>
+    <td valign="middle">
+      <h2>Configurações principais</h2>
+      <p>
+          Principais configurações do ambiente, incluindo o
+          Hyprland e o Neovim na qual sao em Lua.
+      </p>
+    </td>
+    <td align="right" valign="middle">
+      <img src="./img/langLua.png" width="380" alt="Logo da linguagem Lua">
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="middle">
+      <h2>Instalador</h2>
+
+   <p>
+        Instalador desenvolvido em Shell Script,
+        responsável evitar a fadiga na instalação e a configuração dos arquivos.
+      </p>
+    </td>
+    <td align="right" valign="middle">
+      <img src="./img/langBash.png" width="180" alt="Logo do Bash">
+    </td>
+  </tr>
+</table>
+
+
+# Tecnologias
+
+![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square\&logo=lua\&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=flat-square\&logo=gnubash\&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square\&logo=linux\&logoColor=black)
+![Hyprland](https://img.shields.io/badge/Hyprland-58E1FF?style=flat-square)
+![Neovim](https://img.shields.io/badge/Neovim-57A143?style=flat-square\&logo=neovim\&logoColor=white)
+
+
+# Conteúdo
+
+- [Instalacao](#instalacao)
+
+- [Hyprland](#hyprland)
+
+- [Waybar](#waybar)
+
+- [Neovim](#neovim)
+
+
+
+ # Instalacao
+
+  clone o repositorio na sua home se nao o instalador vai da erro 
+  ```bash
+      https://github.com/0xCosme/Dotfiles.git
+  ```
+
+  entrar nele
+  ```bash
+      cd Dotfiles
+  ```
+  dar permissao ao instalador 
+  ```bash
+      chmod +x install.sh
+  ```
+
+  executar instalador(BETA NAO TESTADO) obs(ele ainda nao baixa as dependencias )
+  ```bash
+      ./install.sh
+  ```
+
+
+
+## Hyprland 
 
 Configuração personalizada para **Hyprland** (Wayland compositor) com foco em ser sem foco.
 
@@ -7,7 +86,7 @@ Configuração personalizada para **Hyprland** (Wayland compositor) com foco em 
 
 
 
-# Programas padrão configurados
+#### Programas padrão configurados
 
 * Terminal: `kitty`
 * Gerenciador de arquivos: `thunar`// temporario to indeciso 
@@ -16,7 +95,7 @@ Configuração personalizada para **Hyprland** (Wayland compositor) com foco em 
 
 ---
 
-# Keybindings principais
+#### Keybindings principais
 
 | Atalho               | Função                                           |
 | -------------------- | ------------------------------------------------ |
@@ -39,7 +118,7 @@ Configuração personalizada para **Hyprland** (Wayland compositor) com foco em 
 
 ---
 
-# Monitores
+#### Monitores
 
 tem um exemplo acho q essa explicacao da desatualizadA desde a migracao pra .lua
 Exemplo de configuração multi-monitor:
@@ -59,10 +138,10 @@ monitor = HDMI-A-1,1920x1080@75,1920x0,1.0
 ---
 
 
-# Waybar
+## Waybar
 
 
-![](img/waybarw.png)
+![](img/wayba.png)
 
 <details>
 <summary>Detalhes</summary>
@@ -70,12 +149,12 @@ monitor = HDMI-A-1,1920x1080@75,1920x0,1.0
 ---
 
 
-### Fontes e Ícones
+####Fontes e Ícones
 Para que os ícones (Arch, Bateria, CPU) apareçam corretamente, é necessário instalar uma **Nerd Font**. O comando acima já inclui a `ttf-firacode-nerd `, que é a recomendada para esta configuração.
 
 ---
 
-## Instalação
+#### Instalação
 
 
 Coloque os arquivos `config` e `style.css` dentro da pasta:
@@ -98,12 +177,12 @@ pkill waybar && waybar &
 ---
 
 
-# Neovim
+## Neovim
 
 Configuração simples de **Neovim** feita para estudo e uso diário com node.js/go e c/c++.
 
 
-![](img/neovim.png)
+![](img/nvim.png)
 
 <details>
   <summary>Detalhes</summary>
@@ -111,7 +190,7 @@ Configuração simples de **Neovim** feita para estudo e uso diário com node.js
 
 ---
 
-# Atalhos principais
+#### Atalhos principais
 
 | Atalho | Ação |
 | --- | --- |
@@ -123,7 +202,7 @@ Configuração simples de **Neovim** feita para estudo e uso diário com node.js
 | `<Space>t` | Abrir ou fechar o terminal |
 
 
-# Menu lateral
+#### Menu lateral
 
 Dentro do menu lateral:
 
@@ -138,14 +217,14 @@ Dentro do menu lateral:
 | `q` | Fechar o menu |
 
 
-## Abrir janelas
+#### Abrir janelas
 
 | Atalho | Ação |
 | --- | --- |
 | `<Space>v` | Dividir verticalmente |
 | `<Space>h` | Dividir horizontalmente |
 
-## Fechar janelas
+#### Fechar janelas
 
 | Atalho | Ação |
 | --- | --- |
@@ -153,7 +232,7 @@ Dentro do menu lateral:
 | `<Space>o` | Manter somente a janela atual |
 
 
-# Terminal integrado
+#### Terminal integrado
 
 | Atalho | Ação |
 | --- | --- |
@@ -164,7 +243,7 @@ Dentro do menu lateral:
 
 
 
-# Arquivos abertos
+#### Arquivos abertos
 
 | Atalho | Ação |
 | --- | --- |
@@ -174,7 +253,7 @@ Dentro do menu lateral:
 | `<Space>bc` | Escolher e fechar um arquivo |
 | `<Shift>+C` | Fechar o arquivo atual |
 
-# Busca com Telescope
+#### Busca com Telescope
 
 | Atalho | Ação |
 | --- | --- |
@@ -183,7 +262,7 @@ Dentro do menu lateral:
 | `<Space>fb` | Buscar buffers |
 | `<Space>fh` | Buscar ajuda |
 
-# LSP
+#### LSP
 
 | Atalho | Ação |
 | --- | --- |
@@ -195,7 +274,7 @@ Dentro do menu lateral:
 | `<Space>ca` | Ação de código |
 | `<Space>f` | Formatar arquivo |
 
-# Autocomplete
+#### Autocomplete
 
 | Atalho | Ação |
 | --- | --- |
@@ -211,6 +290,5 @@ Dentro do menu lateral:
 </details>
 
 ---
-
 
 
