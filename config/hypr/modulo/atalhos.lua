@@ -15,8 +15,8 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("hyprshot -m region"))
 
 
 --area de transferencia 
---hl.bind(mainMod .. "+h", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
-hl.bind(mainMod .. "+h", hl.dsp.exec_cmd("cliphist list | hyprlauncher --dmenu | cliphist decode | wl-copy"))
+hl.bind(mainMod .. "+h", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
+--hl.bind(mainMod .. "+h", hl.dsp.exec_cmd("cliphist list | hyprlauncher --dmenu | cliphist decode | wl-copy"))
 
  
 

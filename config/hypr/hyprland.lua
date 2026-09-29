@@ -57,3 +57,4 @@ require("modulo.atalhos")
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 require("modulo.janelas")
+

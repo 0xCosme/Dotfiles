@@ -1,63 +1,18 @@
 # Hyprland Config
 
-Configuração personalizada para **Hyprland** (Wayland compositor) com foco em produtividade, aparência moderna e animações suaves.
+Configuração personalizada para **Hyprland** (Wayland compositor) com foco em ser sem foco.
 
 <details>
   <summary>Detalhes</summary>
 
-Inclui:
 
-* Layout **dwindle** com pseudotile
-* Workspaces inteligentes
-* Configuração de keybindings completa
-* Suporte a touchpad, gestos e múltiplos monitores
-* Barra de status com **Waybar**
-* Integração com clipboard (`wl-paste`/`cliphist`)
-* Suporte a NVIDIA / drivers gráficos
-* Tema visual com bordas arredondadas, sombras e blur
-
----
-
-## Dependências
-
-Para usar esta configuração corretamente, você precisa instalar alguns programas e bibliotecas essenciais.
-
-### Arch Linux 
-
-```bash
-sudo pacman -S hyprland kitty thunar rofi waybar blueman wl-clipboard hyprpaper polkit-gnome playerctl brightnessctl
-```
-
-Opcional (recomendado):
-
-```bash
-sudo pacman -S firefox nerd-fonts-complete xorg-xhost
-```
-
-
-
-> 💡 **Observação:** Também é recomendado instalar uma **Nerd Font** para que os ícones apareçam corretamente no Waybar e no Rofi.
-
----
 
 # Programas padrão configurados
 
 * Terminal: `kitty`
-* Gerenciador de arquivos: `thunar`
+* Gerenciador de arquivos: `thunar`// temporario to indeciso 
 * Menu / launcher: `rofi -show drun -show-icons`
 * Navegador: `firefox`
-
----
-
-# Autostart
-
-Processos iniciados automaticamente:
-
-* Polkit agent (GNOME)
-* Waybar (barra de status)
-* Blueman-applet (gerenciador Bluetooth)
-* `wl-paste` para histórico do clipboard
-* Hyprpaper (papel de parede)
 
 ---
 
@@ -76,22 +31,17 @@ Processos iniciados automaticamente:
 | Super + J / L        | Alternar split / mover janelas                   |
 | Super + H            | Histórico clipboard via rofi                     |
 | Super + Q/A/S        | Screenshot (região/janela/monitor)               |
-| Super + Escape       | Reinicia Waybar                                  |
+| Super + esc          | Reinicia Waybar                                  |
 | Super + setas        | Mover foco da janela                             |
 | Super + 1..0         | Trocar workspace                                 |
 | Super + Shift + 1..0 | Mover janela ativa para workspace correspondente |
 
-### Multimídia / Volume / Brilho
-
-* XF86AudioRaiseVolume / Lower / Mute
-* XF86AudioMicMute
-* XF86MonBrightnessUp / Down
-* Controle de música via **playerctl**
 
 ---
 
 # Monitores
 
+tem um exemplo acho q essa explicacao da desatualizadA desde a migracao pra .lua
 Exemplo de configuração multi-monitor:
 
 ```text
@@ -99,23 +49,10 @@ monitor = eDP-1,1920x1080@60,0x0,1.0
 monitor = HDMI-A-1,1920x1080@75,1920x0,1.0
 ```
 
----
-
-# Aparência
-
-* Layout: **dwindle** com pseudotile
-* Borda ativa: laranja → amarelo (Gruvbox)
-* Borda inativa: cinza (Gruvbox)
-* Shadow e blur ativados
-* Opacidade: janelas ativas 1.0, inativas 0.99
-* Arredondamento de bordas configurável
 
 ---
 
-# Animações
 
-* Suavização via curvas Bezier
-* Fade, popin, border, layers, workspace transitions
 
 </details>
 
@@ -124,7 +61,6 @@ monitor = HDMI-A-1,1920x1080@75,1920x0,1.0
 
 # Waybar
 
-Configuração minimalista e funcional da **Waybar** com tema **Gruvbox**, feita para combinar com o Neovim e otimizar o fluxo de trabalho no **Hyprland**.
 
 ![](img/waybarw.png)
 
@@ -133,62 +69,14 @@ Configuração minimalista e funcional da **Waybar** com tema **Gruvbox**, feita
 
 ---
 
-## Dependências
-
-### Arch Linux
-
-```bash
-sudo pacman -S waybar ttf-jetbrains-mono-nerd network-manager-applet pavucontrol wlogout
-```
-
-```bash
-yay -S wlogout
-```
 
 ### Fontes e Ícones
-Para que os ícones (Arch, Bateria, CPU) apareçam corretamente, é necessário instalar uma **Nerd Font**. O comando acima já inclui a `ttf-jetbrains-mono-nerd`, que é a recomendada para esta configuração.
-
----
-
-## Módulos
-
-Esta configuração utiliza os seguintes módulos organizados para máxima eficiência:
-
-- **Lado Esquerdo**: 
-  - Logo do Arch (``) — Atalho para o lançador de apps.
-  - Workspaces Inteligentes — Mostra apenas os números das áreas de trabalho ativas ou ocupadas.
-- **Centro**: 
-  - Relógio e Data — Com calendário detalhado ao passar o mouse.
-- **Lado Direito**: 
-  - Volume (Pulseaudio) — Clique para abrir o controle de áudio.
-  - Memória RAM — Monitoramento de consumo em tempo real.
-  - CPU — Uso do processador com tooltip detalhado.
-  - GPU — Monitoramento de carga da placa de vídeo (Nvidia).
-  - Rede/Wi-Fi — Mostra o IP Local ao passar o mouse.
-  - Bateria — Ícones dinâmicos que mudam conforme a carga.
-  - Botão Power (``) — Abre o menu de desligamento seguro.
-
----
-
-## Atalhos e Interações
-
-| Módulo | Ação | Função |
-| :--- | :--- | :--- |
-| **Logo Arch** | Clique | Abre o Rofi / Lançador de Apps |
-| **Workspaces** | Clique | Alterna entre áreas de trabalho |
-| **Volume** | Clique | Abre o Pavucontrol (Mixer de Áudio) |
-| **Rede** | Hover | Mostra o IP Local do computador |
-| **Power** | Clique | Abre o menu de desligamento (wlogout) |
+Para que os ícones (Arch, Bateria, CPU) apareçam corretamente, é necessário instalar uma **Nerd Font**. O comando acima já inclui a `ttf-firacode-nerd `, que é a recomendada para esta configuração.
 
 ---
 
 ## Instalação
 
-Crie a pasta de configuração da Waybar:
-
-```bash
-mkdir -p ~/.config/waybar
-```
 
 Coloque os arquivos `config` e `style.css` dentro da pasta:
 
@@ -212,145 +100,113 @@ pkill waybar && waybar &
 
 # Neovim
 
-Configuração simples de **Neovim** feita para estudo e uso diário.
-Os plugins são gerenciados automaticamente usando **lazy.nvim**.
+Configuração simples de **Neovim** feita para estudo e uso diário com node.js/go e c/c++.
+
 
 ![](img/neovim.png)
 
 <details>
   <summary>Detalhes</summary>
 
----
-
-## Dependências
-
-### Arch Linux
-
-```bash
-sudo pacman -S neovim git ripgrep
-```
-
-### Debian / Ubuntu
-
-```bash
-sudo apt install neovim git ripgrep
-```
-
-
-Também é recomendado instalar uma **Nerd Font** para que os ícones funcionem corretamente no editor.
 
 ---
 
-## Plugins
+# Atalhos principais
 
-Esta configuração utiliza os seguintes plugins:
+| Atalho | Ação |
+| --- | --- |
+| `<Space>w` | Salvar arquivo |
+| `<Space>q` | Sair do Neovim |
+| `<Space>x` | Salvar e sair |
+| `<Esc>` | Limpar destaque da busca |
+| `<Space>e` | Abrir ou fechar o menu lateral |
+| `<Space>t` | Abrir ou fechar o terminal |
 
-* gruvbox — tema
 
-* alpha-nvim — dashboard inicial
+# Menu lateral
 
-* lualine.nvim — barra de status
+Dentro do menu lateral:
 
-* neo-tree.nvim — explorador de arquivos
+| Tecla | Ação |
+| --- | --- |
+| `Enter` | Abrir arquivo ou entrar em pasta |
+| `a` | Criar arquivo ou pasta |
+| `d` | Excluir arquivo ou pasta |
+| `r` | Renomear arquivo ou pasta |
+| `v` | Abrir em janela vertical |
+| `s` | Abrir em janela horizontal |
+| `q` | Fechar o menu |
 
-* toggleterm.nvim — terminal integrado
 
-* nvim-autopairs — fechamento automático de parênteses
+## Abrir janelas
 
-* nvim-treesitter — highlight de sintaxe
+| Atalho | Ação |
+| --- | --- |
+| `<Space>v` | Dividir verticalmente |
+| `<Space>h` | Dividir horizontalmente |
 
-* telescope.nvim — busca de arquivos e texto
+## Fechar janelas
 
-* nvim-cmp — autocomplete
+| Atalho | Ação |
+| --- | --- |
+| `<Space>c` | Fechar somente a janela atual |
+| `<Space>o` | Manter somente a janela atual |
 
-* LuaSnip — snippets
 
-* gitsigns.nvim — indicadores de alterações do Git
+# Terminal integrado
 
-* which-key.nvim — exibe atalhos disponíveis
+| Atalho | Ação |
+| --- | --- |
+| `<Space>t` | Abrir ou fechar o terminal |
+| `<C-\\>` | Alternar entre terminal e editor |
+| `<C-\\><C-n>` | Sair do modo de digitação do terminal |
+| `i` | Voltar a digitar no terminal |
 
-* indent-blankline.nvim — guias visuais de indentação
 
-Todos os plugins são instalados automaticamente pelo **lazy.nvim**.
+
+# Arquivos abertos
+
+| Atalho | Ação |
+| --- | --- |
+| `<S-h>` | Arquivo anterior |
+| `<S-l>` | Próximo arquivo |
+| `<Space>bp` | Escolher um arquivo aberto |
+| `<Space>bc` | Escolher e fechar um arquivo |
+| `<Shift>+C` | Fechar o arquivo atual |
+
+# Busca com Telescope
+
+| Atalho | Ação |
+| --- | --- |
+| `<Space>ff` | Buscar arquivos |
+| `<Space>fg` | Buscar texto no projeto |
+| `<Space>fb` | Buscar buffers |
+| `<Space>fh` | Buscar ajuda |
+
+# LSP
+
+| Atalho | Ação |
+| --- | --- |
+| `gd` | Ir para a definição |
+| `gD` | Ir para a declaração |
+| `gr` | Mostrar referências |
+| `K` | Mostrar documentação |
+| `<Space>rn` | Renomear símbolo |
+| `<Space>ca` | Ação de código |
+| `<Space>f` | Formatar arquivo |
+
+# Autocomplete
+
+| Atalho | Ação |
+| --- | --- |
+| `<C-Space>` | Abrir sugestões |
+| `<CR>` | Confirmar sugestão |
+| `<Tab>` | Próxima sugestão |
+| `<S-Tab>` | Sugestão anterior |
 
 ---
 
-## LSP (Language Server)
 
-A configuração utiliza **LSP nativo do Neovim** para fornecer:
-
-* autocompletar
-* navegação de código
-* documentação
-* renomeação de símbolos
-* ações rápidas
-
-Os servidores são instalados automaticamente usando **mason.nvim**.
-
-LSPs incluídos:
-
-* **lua_ls** — suporte para Lua
-* **clangd** — suporte para C / C++
-* **ts_ls** — suporte para JavaScript / TypeScript
-
----
-
-## Atalhos principais
-
-| Atalho     | Função                                |
-| ---------- | ------------------------------------- |
-| Ctrl + n   | Abrir / fechar explorador de arquivos |
-| Ctrl + t   | Abrir / fechar terminal               |
-| Space + ff | Buscar arquivos                       |
-| Space + fg | Buscar texto no projeto               |
-
-Leader key: `Space`
-
----
-
-## Atalhos do LSP
-
-| Atalho     | Função               |
-| ---------- | -------------------- |
-| gd         | Ir para definição    |
-| K          | Mostrar documentação |
-| Space + rn | Renomear símbolo     |
-| Space + ca | Code action          |
-
----
-
-## Atalhos úteis
-
-### Git
-
-| Atalho | Função             |
-| ------ | ------------------ |
-| ]c     | Próxima alteração  |
-| [c     | Alteração anterior |
-
----
-
-## Instalação
-
-Crie a pasta de configuração:
-
-```bash
-mkdir -p ~/.config/nvim
-```
-
-Coloque o arquivo `init.lua` dentro da pasta:
-
-```
-~/.config/nvim/init.lua
-```
-
-Abra o Neovim:
-
-```bash
-nvim
-```
-
-Na primeira execução o **lazy.nvim** irá instalar todos os plugins automaticamente.
 
 </details>
 

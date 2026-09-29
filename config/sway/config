@@ -1,0 +1,237 @@
+# Configuração padrão do Sway
+#
+# Copie isto para ~/.config/sway/config e edite conforme sua preferência.
+#
+# Leia `man 5 sway` para obter uma referência completa.
+
+### VARIAVEIS
+
+include ~/.config/sway/conf.d/variables.conf
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+#CONFIGURAR MONITOR
+include ~/.config/sway/conf.d/outputs.conf
+
+
+
+
+
+
+# Papel de parede padrão (há mais resoluções disponíveis em /usr/share/backgrounds/sway/)
+
+#
+
+### Configuração de inatividade
+#
+# Exemplo de configuração:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# Isso bloqueará sua tela após 300 segundos de inatividade e, depois de mais
+# 300 segundos, desligará seus monitores. As telas serão ligadas novamente
+# quando a atividade for retomada. A tela também será bloqueada antes de o
+# computador entrar em suspensão.
+
+### Configuração de entrada
+#
+# Exemplo de configuração:
+#
+#   input type:touchpad {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+#   input type:keyboard {
+#       xkb_layout "eu"
+#   }
+#
+# Você também pode configurar cada dispositivo individualmente.
+# Leia `man 5 sway-input` para obter mais informações sobre esta seção.
+
+### Atalhos de teclado
+#
+# Básico:
+#
+    # Iniciar um terminal
+    bindsym $mod+Return exec $term
+
+    # Encerrar a janela em foco
+    bindsym $mod+c kill
+
+    # Iniciar o lançador de aplicativos
+    bindsym $mod+space exec $menu
+
+    # Arraste janelas flutuantes mantendo $mod pressionado e usando o botão esquerdo do mouse.
+    # Redimensione-as com o botão direito do mouse + $mod.
+    # Apesar do nome, isso também funciona para janelas não flutuantes.
+    # Troque normal por inverse para usar o botão esquerdo para redimensionar e o direito para arrastar.
+    floating_modifier $mod normal
+
+    # Recarregar o arquivo de configuração
+    bindsym $mod+Shift+c reload
+
+    # Sair do Sway (encerra sua sessão Wayland)
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#
+# Navegação:
+#
+    # Mover o foco
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Ou use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Mover a janela em foco usando as mesmas teclas, mas adicionando Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # O mesmo usando as teclas de seta
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+#
+# Áreas de trabalho:
+#
+    # Alternar para uma área de trabalho
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+    # Mover o contêiner em foco para uma área de trabalho
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+    # Observação: as áreas de trabalho podem ter qualquer nome, não apenas números.
+    # Aqui usamos 1 a 10 como padrão.
+#
+# Configurações de layout:
+#
+    # Você pode "dividir" o objeto atualmente em foco usando
+    # $mod+b ou $mod+v, para divisões horizontais e verticais,
+    # respectivamente.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Alternar o contêiner atual entre diferentes estilos de layout
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Colocar o foco atual em tela cheia
+    bindsym $mod+f fullscreen
+
+    # Alternar o foco atual entre os modos lado a lado e flutuante
+  #  bindsym $mod+Shift+space floating toggle
+
+    # Alternar o foco entre a área lado a lado e a área flutuante
+   # bindsym $mod+space focus mode_toggle
+
+    # Mover o foco para o contêiner pai
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # O Sway possui um "scratchpad", uma área de armazenamento temporário para janelas.
+    # Você pode enviar janelas para lá e recuperá-las depois.
+
+    # Mover a janela atualmente em foco para o scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+
+    # Mostrar a próxima janela do scratchpad ou ocultar a janela do scratchpad em foco.
+    # Se houver várias janelas no scratchpad, este comando alternará entre elas.
+    bindsym $mod+minus scratchpad show
+#
+# Redimensionar contêineres:
+#
+mode "resize" {
+    # esquerda reduz a largura dos contêineres
+    # direita aumenta a largura dos contêineres
+    # cima reduz a altura dos contêineres
+    # baixo aumenta a altura dos contêineres
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # O mesmo usando as teclas de seta
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Voltar ao modo padrão
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+#
+# Utilitários:
+#
+    # Teclas especiais para ajustar o volume via PulseAudio
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
+    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
+
+    # Teclas especiais para controlar a mídia via playerctl
+    bindsym --locked XF86AudioPlay exec playerctl play-pause
+    bindsym --locked XF86AudioPause exec playerctl play-pause
+    bindsym --locked XF86AudioPrev exec playerctl previous
+    bindsym --locked XF86AudioNext exec playerctl next
+    bindsym --locked XF86AudioStop exec playerctl stop
+
+    # Teclas especiais para ajustar o brilho via brightnessctl
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+
+    # Tecla especial para tirar uma captura de tela com o grim
+    #bindsym Print exec grim
+
+    bindsym Print exec sh -c 'grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%s).png | tee >(wl-copy)'
+
+
+
+#
+# Barra de status:
+#
+# Leia `man 5 sway-bar` para obter mais informações sobre esta seção.
+bar {
+    position top
+
+    # Quando status_command imprime uma nova linha na saída padrão, o swaybar é atualizado.
+    # O padrão mostra apenas a data e a hora atuais.
+    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
+include /etc/sway/config.d/*
