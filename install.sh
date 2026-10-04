@@ -4,9 +4,13 @@ set -e
 
 DOTFILES="$HOME/dotfiles"
 
+echo "==> Instalando pacotes..."
+"$DOTFILES/scripts/packages.sh"
+
+echo "==> Configurando dotfiles..."
 mkdir -p "$HOME/.config"
 
-for item in "$DOTFILES/conf/"* "$DOTFILES/conf/."*; do
+for item in "$DOTFILES/config/"* "$DOTFILES/config/."*; do
     name="$(basename "$item")"
 
     [[ "$name" == "." || "$name" == ".." ]] && continue
