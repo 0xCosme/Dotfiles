@@ -1,5 +1,3 @@
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
-
 
 -- Cursor
 hl.env("XCURSOR_SIZE", "24")

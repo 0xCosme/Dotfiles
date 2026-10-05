@@ -57,7 +57,7 @@ ___
 
 
 ## Hyprland 
-Configuração personalizada para **Hyprland** (Wayland compositor) com foco em ser sem foco.
+![](img/sistema.png)
 
 <details>
   <summary>Detalhes</summary>
@@ -106,11 +106,9 @@ monitor = HDMI-A-1,1920x1080@75,1920x0,1.0
 ```
 
 
----
-
-
-
 </details>
+
+
 
 ---
 
@@ -119,39 +117,14 @@ monitor = HDMI-A-1,1920x1080@75,1920x0,1.0
 
 ![](img/wayba.png)
 
-<details>
-<summary>Detalhes</summary>
-
 ---
 
-
-####Fontes e Ícones
-Para que os ícones (Arch, Bateria, CPU) apareçam corretamente, é necessário instalar uma **Nerd Font**. O comando acima já inclui a `ttf-firacode-nerd `, que é a recomendada para esta configuração.
-
----
-
-#### Instalação
-
-
-Coloque os arquivos `config` e `style.css` dentro da pasta:
-
-```bash
-~/.config/waybar/config
-~/.config/waybar/style.css
-```
-
-Para aplicar as mudanças, reinicie a Waybar:
-
-```bash
-pkill waybar && waybar &
-```
-
-</details>
+## Rofi 
+![](img/rofi.png)
 
 
 
 ---
-
 
 ## Neovim
 
@@ -265,6 +238,7 @@ Dentro do menu lateral:
 </details>
 
 ---
+
 
 
 
