@@ -1,6 +1,9 @@
 # DOTFILES
-Setup pessoal
-
+![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square\&logo=lua\&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=flat-square\&logo=gnubash\&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square\&logo=linux\&logoColor=black)
+![Hyprland](https://img.shields.io/badge/Hyprland-58E1FF?style=flat-square)
+![Neovim](https://img.shields.io/badge/Neovim-57A143?style=flat-square\&logo=neovim\&logoColor=white)
 
 
 <table>
@@ -23,7 +26,7 @@ Setup pessoal
 
    <p>
         Instalador desenvolvido em Shell Script,
-        responsável evitar a fadiga na instalação e a configuração dos arquivos.
+        responsável evitar a fadiga na instalação e a criação dos link simbólicos.
       </p>
     </td>
     <td align="right" valign="middle">
@@ -33,14 +36,9 @@ Setup pessoal
 </table>
 
 
-# Tecnologias
 
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square\&logo=lua\&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-121011?style=flat-square\&logo=gnubash\&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square\&logo=linux\&logoColor=black)
-![Hyprland](https://img.shields.io/badge/Hyprland-58E1FF?style=flat-square)
-![Neovim](https://img.shields.io/badge/Neovim-57A143?style=flat-square\&logo=neovim\&logoColor=white)
 
+<!--
 
 # Conteúdo
 
@@ -53,37 +51,16 @@ Setup pessoal
 - [Neovim](#neovim)
 
 
+-->
 
- # Instalacao
-
-  clone o repositorio na sua home se nao o instalador vai da erro 
-  ```bash
-      https://github.com/0xCosme/Dotfiles.git
-  ```
-
-  entrar nele
-  ```bash
-      cd Dotfiles
-  ```
-  dar permissao ao instalador 
-  ```bash
-      chmod +x install.sh
-  ```
-
-  executar instalador(BETA NAO TESTADO) obs(ele ainda nao baixa as dependencias )
-  ```bash
-      ./install.sh
-  ```
-
+___
 
 
 ## Hyprland 
-
 Configuração personalizada para **Hyprland** (Wayland compositor) com foco em ser sem foco.
 
 <details>
   <summary>Detalhes</summary>
-
 
 
 #### Programas padrão configurados
@@ -140,7 +117,6 @@ monitor = HDMI-A-1,1920x1080@75,1920x0,1.0
 
 ## Waybar
 
-
 ![](img/wayba.png)
 
 <details>
@@ -180,7 +156,6 @@ pkill waybar && waybar &
 ## Neovim
 
 Configuração simples de **Neovim** feita para estudo e uso diário com node.js/go e c/c++.
-
 
 ![](img/nvim.png)
 
@@ -291,4 +266,26 @@ Dentro do menu lateral:
 
 ---
 
+
+
+ # Instalacao
+
+  clone o repositorio na sua home se nao o instalador vai da erro 
+  ```bash
+      https://github.com/0xCosme/Dotfiles.git
+  ```
+
+  entrar nele
+  ```bash
+      cd Dotfiles
+  ```
+  dar permissao ao instalador 
+  ```bash
+      chmod +x install.sh
+  ```
+
+  executar instalador(BETA NAO TESTADO) obs(ele ainda nao baixa as dependencias )
+  ```bash
+      ./install.sh
+  ```
 
