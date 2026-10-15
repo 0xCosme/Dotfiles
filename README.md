@@ -231,6 +231,40 @@ Dentro do menu lateral:
 | `<Tab>` | Próxima sugestão |
 | `<S-Tab>` | Sugestão anterior |
 
+
+
+#### NEOVIM + IA LOCAL
+
+---
+
+#### Atalhos do Minuet
+
+| Atalho | Ação |
+| --- | --- |
+| `<A-y>` | Aceitar a sugestão completa |
+| `<A-l>` | Aceitar somente a linha sugerida |
+| `<A-]>` | Mostrar a próxima sugestão |
+| `<A-[>` | Mostrar a sugestão anterior |
+| `<A-e>` | Descartar a sugestão |
+
+`<A-...>` significa segurar **Alt** e pressionar a tecla indicada.
+
+---
+
+#### Abrir o chat
+
+O **CodeCompanion.nvim** permite conversar com a IA dentro do Neovim.
+
+Para abrir ou fechar o chat, pressione:
+
+```
+<leader>a
+```
+
+
+
+
+
 ---
 
 
